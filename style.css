@@ -1,0 +1,181 @@
+:root{
+    --branco-principal: #FFFFFF;
+    --cinza-secundaria: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter'; /*Aqui estou definindo a fonte que importei lá no head do html*/
+    --bota-azul-efeito: #3f8ceb;
+}
+/* Esse agrupamento de ROOT está se referindo ao HTML em si, 
+cada um deles incluí uma variável pra definir as cores utilizadas no projeto
+*/
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal); /*O color já pega a cor do TEXTO que está no Body*/
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+*{ /*O asterísco pega todos os elementos HTML e coloca este estilo que está aqui, não é igual o ROOT*/
+    margin: 0;
+    padding: 0;
+}
+
+.principal{
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat; /*Aqui estou definindo pra imagem não repetir no background*/
+    background-size: contain; /*Aqui estou definindo o tamanho do background, defini o contain, que ele pegará todo o container da divisória*/
+    align-items: center;
+    text-align: center;
+}
+
+.container{
+    height: 100vh;/*100vh é da tela, a medida vh é da tela*/
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px; /*border-radius, é pra deixar o botão com borda arredondada*/
+    padding: 1em; /*Padding é a distancia entre o eemento e as bordas da página ou componente.  1em é o tamanho relativo a fonte*/
+    color: var(--branco-principal);/*Aqui estou definindo a cor do texto do botão*/
+    display: block; /*Display block é pra ele pegar a tela como um todo*/
+    text-decoration: none; /*é pra tirar o SUBLINHADO do botão*/
+    margin-bottom: 1em;
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundaria);
+}
+
+.container__titulo{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0; /*Pense em cada valor como cada área o primeiro 1em é o top(cima) o 0 é o right, o 2em é o bottom e o 0 é o left*/
+
+}
+
+.container__caixa {
+    margin: 0 6em;  /*o 0 é o topo e 6em é o direita*/
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em; 
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em; 
+}
+
+.descricao__texto{
+    color: var(--cinza-secundaria);
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item{
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+.rodape {
+    align-items: center;
+}
+
+.rodape__logo{
+    margin: 1em 5% 2em 50%;
+
+}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    text-align: center;
+}
+
+.lista__link{
+    color: var(--branco-principal);
+    padding: 0.5em; 
+    margin-bottom: 2em;
+    text-decoration: none;
+}
+
+.lista_link, a{
+    text-decoration: none;
+ 
+    color: var(--branco-principal);
+
+
+    
+}
+
+.rodape__texto {
+    color: var(--cinza-secundaria);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    padding: 1em;
+
+}
+
+.lista_link, a:hover{ /*Aqui a gente passa o mouse por cima e ele muda a cor*/
+    color: var(--botao-azul);
+
+}
+
+.lista__link a:active{
+    color: blueviolet;
+}
+
+.container__botao:hover{
+    background-color: var(--bota-azul-efeito);
+    color: var(--cor-de-fundo);
+}
+
+
+/*Os hover e active, são pseudo-classes do CSS, e tem diversos outros, acesse: 
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes*/
